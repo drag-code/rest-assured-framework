@@ -1,0 +1,352 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 15 13:21:09 CST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>5 seconds (5389 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testng.Assignment4.validateSuccessfullPostRegister()'><b>validateSuccessfullPostRegister</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-775093282" onClick='toggleBox("Output-775093282", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-775093282" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-775093282">
+PostRegister status code: 200<br/>
+PostRegister response body: {
+    "id": 4,
+    "token": "QpwL5tke4Pnpja7X4"
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validateGetUnknownList()'><b>validateGetUnknownList</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-1569371800" onClick='toggleBox("Output-1569371800", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1569371800" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1569371800">
+GetUnknownList code: 200<br/>
+GetUnknownList response body: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 1,
+            "name": "cerulean",
+            "year": 2000,
+            "color": "#98B2D1",
+            "pantone_value": "15-4020"
+        },
+        {
+            "id": 2,
+            "name": "fuchsia rose",
+            "year": 2001,
+            "color": "#C74375",
+            "pantone_value": "17-2031"
+        },
+        {
+            "id": 3,
+            "name": "true red",
+            "year": 2002,
+            "color": "#BF1932",
+            "pantone_value": "19-1664"
+        },
+        {
+            "id": 4,
+            "name": "aqua sky",
+            "year": 2003,
+            "color": "#7BC4C4",
+            "pantone_value": "14-4811"
+        },
+        {
+            "id": 5,
+            "name": "tigerlily",
+            "year": 2004,
+            "color": "#E2583E",
+            "pantone_value": "17-1456"
+        },
+        {
+            "id": 6,
+            "name": "blue turquoise",
+            "year": 2005,
+            "color": "#53B0AE",
+            "pantone_value": "15-5217"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validatePostLogin()'><b>validatePostLogin</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-1315188449" onClick='toggleBox("Output-1315188449", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1315188449" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1315188449">
+PostLogin status code: 201<br/>
+PostLogin response body: {
+    "skills": [
+        "java",
+        "python",
+        "node",
+        "kotlin"
+    ],
+    "name": "mkyong",
+    "position": [
+        "Founder",
+        "CTO",
+        "Writer"
+    ],
+    "salary": {
+        "2010": 10000,
+        "2012": 12000,
+        "2018": 14000
+    },
+    "age": 38,
+    "id": "710",
+    "createdAt": "2023-02-15T19:21:26.737Z"
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validateGetUser()'><b>validateGetUser</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-1742633625" onClick='toggleBox("Output-1742633625", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1742633625" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1742633625">
+GetUser with id=2 status code: 200<br/>
+GetUser with id=2 response body: {
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validateGetUsers()'><b>validateGetUsers</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-262093096" onClick='toggleBox("Output-262093096", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-262093096" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-262093096">
+GetUsers status code: 200<br/>
+GetUsers response body: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        },
+        {
+            "id": 2,
+            "email": "janet.weaver@reqres.in",
+            "first_name": "Janet",
+            "last_name": "Weaver",
+            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+        },
+        {
+            "id": 3,
+            "email": "emma.wong@reqres.in",
+            "first_name": "Emma",
+            "last_name": "Wong",
+            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+        },
+        {
+            "id": 4,
+            "email": "eve.holt@reqres.in",
+            "first_name": "Eve",
+            "last_name": "Holt",
+            "avatar": "https://reqres.in/img/faces/4-image.jpg"
+        },
+        {
+            "id": 5,
+            "email": "charles.morris@reqres.in",
+            "first_name": "Charles",
+            "last_name": "Morris",
+            "avatar": "https://reqres.in/img/faces/5-image.jpg"
+        },
+        {
+            "id": 6,
+            "email": "tracey.ramos@reqres.in",
+            "first_name": "Tracey",
+            "last_name": "Ramos",
+            "avatar": "https://reqres.in/img/faces/6-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validateUnsuccessfullPostRegister()'><b>validateUnsuccessfullPostRegister</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-766722027" onClick='toggleBox("Output-766722027", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-766722027" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-766722027">
+PostRegister status code: 400<br/>
+PostRegister response body: {
+    "error": "Missing email or username"
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validateGetUnknownUser()'><b>validateGetUnknownUser</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-2098041249" onClick='toggleBox("Output-2098041249", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2098041249" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2098041249">
+GetUnknown status code: 404<br/>
+GetUnknown response body: {
+    
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validatePutUser()'><b>validatePutUser</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-1162400340" onClick='toggleBox("Output-1162400340", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1162400340" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1162400340">
+GetUser with id=2 status code: 200<br/>
+GetUser with id=2 response body: {
+    "name": "Esteban Alexis",
+    "job": "Junior QA Professional",
+    "updatedAt": "2023-02-15T19:21:27.159Z"
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+<tr>
+<td title='testng.Assignment4.validatePostCreateUser()'><b>validatePostCreateUser</b><br>Test class: testng.Assignment4<br/>
+<a href="#Output-1082579195" onClick='toggleBox("Output-1082579195", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1082579195" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1082579195">
+PostCreateUsers status code: 201<br/>
+PostCreateUsers response body: {
+    "name": "Esteban Alexis",
+    "job": "Junior QA Professional",
+    "id": "250",
+    "createdAt": "2023-02-15T19:21:26.269Z"
+}<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testng.Assignment4@4f2b503c</td></tr>
+</table><p>
+</body>
+</html>

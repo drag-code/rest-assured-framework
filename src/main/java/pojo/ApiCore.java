@@ -1,25 +1,48 @@
 package pojo;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.Map;
+
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import util.Constants;
 import util.SerializationUtil;
 
 public class ApiCore {
 
-	public Response PostLogin(String fileName, String resource) {
-		Response response = null;
-		CustomResponse customResponse = null;
-		
-		try (FileReader fileReader = new FileReader(Constants.FILES_PATH + "\\" + fileName)) {
-			String body = SerializationUtil.deserializeFromFileAsJsonString(fileReader);
-			customResponse = new CustomResponse(resource, body);
-			response = customResponse.getResponseFromPost();
-		} catch (FileNotFoundException e) {} 
-		catch (IOException e) {}
+	private Response response;
+	private CustomRequest customRequest;
+	
+	public ApiCore(String resource, String baseURI) {
+		setBaseURI(baseURI);
+		customRequest = new CustomRequest(resource);
+	}
+	
+	public ApiCore(String resource, String fileName, String baseURI) {
+		setBaseURI(baseURI);
+		String body = SerializationUtil.deserializeFromFileAsJsonString(fileName);
+		customRequest = new CustomRequest(resource, body);
+	}
+	
+	public void setBaseURI(String baseURI) {
+		RestAssured.baseURI = baseURI;
+	}
 
+	public Response post() {
+		response = customRequest.post();
+		return response;
+	}
+
+	public Response get() {
+		response = customRequest.get();
+		return response;
+	}
+	
+	public Response get(Map<String, String> params) {
+		customRequest.addQueryParams(params);
+		return get();
+	}
+	
+	public Response put() {
+		response = customRequest.put();
 		return response;
 	}
 }

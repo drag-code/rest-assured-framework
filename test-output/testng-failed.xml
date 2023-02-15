@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng.Test2">
+      <class name="testng.Assignment4">
         <methods>
-          <include name="validateFullResponse"/>
+          <include name="validateSuccessfullPostRegister"/>
+          <include name="validatePostCreateUser"/>
+          <include name="validateUnsuccessfullPostRegister"/>
+          <include name="setup"/>
+          <include name="validatePostLogin"/>
         </methods>
-      </class> <!-- testng.Test2 -->
+      </class> <!-- testng.Assignment4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

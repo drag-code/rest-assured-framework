@@ -64,7 +64,6 @@ public class Staff implements Jsonable {
 				+ ", salary=" + salary + "]";
 	}
 
-	@Override
 	public String toJson() {
 		final StringWriter writable = new StringWriter();
 		try {
@@ -74,7 +73,6 @@ public class Staff implements Jsonable {
 		return writable.toString();
 	}
 
-	@Override
 	public void toJson(Writer writable) throws IOException {
 		final JsonObject json = new JsonObject();
 		json.put("name", this.getName());
@@ -84,5 +82,7 @@ public class Staff implements Jsonable {
 		json.put("salary", this.getSalary());
 		json.toJson(writable);
 	}
+
+	
 
 }

@@ -8,11 +8,174 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">3,228</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,389</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testng.PostTest</td><td><a href="#m0">validatePostTestFromMyResponse</a></td><td rowspan="1">1676400581391</td><td rowspan="1">3118</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">testng.Assignment4</td><td><a href="#m0">validateGetUnknownList</a></td><td rowspan="1">1676488869917</td><td rowspan="1">2232</td></tr><tr class="passedeven"><td><a href="#m1">validateGetUnknownUser</a></td><td rowspan="1">1676488872152</td><td rowspan="1">483</td></tr><tr class="passedeven"><td><a href="#m2">validateGetUser</a></td><td rowspan="1">1676488872637</td><td rowspan="1">179</td></tr><tr class="passedeven"><td><a href="#m3">validateGetUsers</a></td><td rowspan="1">1676488872817</td><td rowspan="1">159</td></tr><tr class="passedeven"><td><a href="#m4">validatePostCreateUser</a></td><td rowspan="1">1676488872977</td><td rowspan="1">430</td></tr><tr class="passedeven"><td><a href="#m5">validatePostLogin</a></td><td rowspan="1">1676488873408</td><td rowspan="1">462</td></tr><tr class="passedeven"><td><a href="#m6">validatePutUser</a></td><td rowspan="1">1676488873871</td><td rowspan="1">420</td></tr><tr class="passedeven"><td><a href="#m7">validateSuccessfullPostRegister</a></td><td rowspan="1">1676488874292</td><td rowspan="1">472</td></tr><tr class="passedeven"><td><a href="#m8">validateUnsuccessfullPostRegister</a></td><td rowspan="1">1676488874765</td><td rowspan="1">468</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testng.PostTest#validatePostTestFromMyResponse</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testng.Assignment4#validateGetUnknownList</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">GetUnknownList code: 200<br/>GetUnknownList response body: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 1,
+            "name": "cerulean",
+            "year": 2000,
+            "color": "#98B2D1",
+            "pantone_value": "15-4020"
+        },
+        {
+            "id": 2,
+            "name": "fuchsia rose",
+            "year": 2001,
+            "color": "#C74375",
+            "pantone_value": "17-2031"
+        },
+        {
+            "id": 3,
+            "name": "true red",
+            "year": 2002,
+            "color": "#BF1932",
+            "pantone_value": "19-1664"
+        },
+        {
+            "id": 4,
+            "name": "aqua sky",
+            "year": 2003,
+            "color": "#7BC4C4",
+            "pantone_value": "14-4811"
+        },
+        {
+            "id": 5,
+            "name": "tigerlily",
+            "year": 2004,
+            "color": "#E2583E",
+            "pantone_value": "17-1456"
+        },
+        {
+            "id": 6,
+            "name": "blue turquoise",
+            "year": 2005,
+            "color": "#53B0AE",
+            "pantone_value": "15-5217"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testng.Assignment4#validateGetUnknownUser</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">GetUnknown status code: 404<br/>GetUnknown response body: {
+    
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testng.Assignment4#validateGetUser</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">GetUser with id=2 status code: 200<br/>GetUser with id=2 response body: {
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testng.Assignment4#validateGetUsers</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">GetUsers status code: 200<br/>GetUsers response body: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        },
+        {
+            "id": 2,
+            "email": "janet.weaver@reqres.in",
+            "first_name": "Janet",
+            "last_name": "Weaver",
+            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+        },
+        {
+            "id": 3,
+            "email": "emma.wong@reqres.in",
+            "first_name": "Emma",
+            "last_name": "Wong",
+            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+        },
+        {
+            "id": 4,
+            "email": "eve.holt@reqres.in",
+            "first_name": "Eve",
+            "last_name": "Holt",
+            "avatar": "https://reqres.in/img/faces/4-image.jpg"
+        },
+        {
+            "id": 5,
+            "email": "charles.morris@reqres.in",
+            "first_name": "Charles",
+            "last_name": "Morris",
+            "avatar": "https://reqres.in/img/faces/5-image.jpg"
+        },
+        {
+            "id": 6,
+            "email": "tracey.ramos@reqres.in",
+            "first_name": "Tracey",
+            "last_name": "Ramos",
+            "avatar": "https://reqres.in/img/faces/6-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testng.Assignment4#validatePostCreateUser</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PostCreateUsers status code: 201<br/>PostCreateUsers response body: {
+    "name": "Esteban Alexis",
+    "job": "Junior QA Professional",
+    "id": "250",
+    "createdAt": "2023-02-15T19:21:26.269Z"
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testng.Assignment4#validatePostLogin</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PostLogin status code: 201<br/>PostLogin response body: {
+    "skills": [
+        "java",
+        "python",
+        "node",
+        "kotlin"
+    ],
+    "name": "mkyong",
+    "position": [
+        "Founder",
+        "CTO",
+        "Writer"
+    ],
+    "salary": {
+        "2010": 10000,
+        "2012": 12000,
+        "2018": 14000
+    },
+    "age": 38,
+    "id": "710",
+    "createdAt": "2023-02-15T19:21:26.737Z"
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testng.Assignment4#validatePutUser</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">GetUser with id=2 status code: 200<br/>GetUser with id=2 response body: {
+    "name": "Esteban Alexis",
+    "job": "Junior QA Professional",
+    "updatedAt": "2023-02-15T19:21:27.159Z"
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testng.Assignment4#validateSuccessfullPostRegister</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PostRegister status code: 200<br/>PostRegister response body: {
+    "id": 4,
+    "token": "QpwL5tke4Pnpja7X4"
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testng.Assignment4#validateUnsuccessfullPostRegister</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PostRegister status code: 400<br/>PostRegister response body: {
+    "error": "Missing email or username"
+}</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
