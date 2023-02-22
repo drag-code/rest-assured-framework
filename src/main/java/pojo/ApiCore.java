@@ -16,6 +16,11 @@ public class ApiCore {
 		customRequest = new CustomRequest(resource);
 	}
 	
+	public ApiCore(String baseURI) {
+		setBaseURI(baseURI);
+		customRequest = new CustomRequest();
+	}
+	
 	public ApiCore(String resource, String fileName, String baseURI) {
 		setBaseURI(baseURI);
 		String body = SerializationUtil.deserializeFromFileAsJsonString(fileName);
@@ -26,6 +31,10 @@ public class ApiCore {
 		RestAssured.baseURI = baseURI;
 	}
 
+	public CustomRequest getCustomRequest() {
+		return customRequest;
+	}
+	
 	public Response post() {
 		response = customRequest.post();
 		return response;
@@ -43,6 +52,11 @@ public class ApiCore {
 	
 	public Response put() {
 		response = customRequest.put();
+		return response;
+	}
+	
+	public Response delete() {
+		response = customRequest.delete();
 		return response;
 	}
 }

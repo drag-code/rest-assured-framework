@@ -11,4 +11,10 @@ public class Constants {
 	//PLACES API CONSTANTS
 	public static String PLACES_BASE_URI = "https://rahulshettyacademy.com";
 	public static String PLACES_KEY = "qaclick123";
+	
+	//LIBRARY API CONSTANTS
+	public static String LIBRARY_BASE_URI = "http://216.10.245.166";
+	public static String LIBRARY_ADD_BOOK = "/Library/Addbook.php";
+	public static String LIBRARY_GET_BOOK = "/Library/GetBook.php";
+	public static String LIBRARY_DELETE_BOOK = "/Library/DeleteBook.php";
 }

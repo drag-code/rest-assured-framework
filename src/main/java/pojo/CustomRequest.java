@@ -6,6 +6,7 @@ import java.util.Map;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import util.SerializationUtil;
 
 public class CustomRequest {
 	private String resource;
@@ -18,13 +19,25 @@ public class CustomRequest {
 		httpRequest = RestAssured.given();
 	}
 	
-	@SuppressWarnings("serial")
+	public CustomRequest() {
+		httpRequest = RestAssured.given();
+	}
+	
+	public void setResource(String resource) {
+		this.resource = resource;
+	}
+	
 	public CustomRequest(String resource, String body) {
 		this(resource);
+		setJsonHeaders();
+		httpRequest.body(body);
+	}
+	
+	@SuppressWarnings("serial")
+	public void setJsonHeaders() {
 		addHeaders(new HashMap<String, String>() {{
 			put("Content-Type", "application/json");
 		}});
-		httpRequest.body(body);
 	}
 	
 	public void addHeaders(Map<String, String> extraHeaders) {
@@ -37,8 +50,18 @@ public class CustomRequest {
 		httpRequest.queryParams(queryParams);
 	}
 	
+	public void addQueryParam(String key, String value) {
+		queryParams.put(key, value);
+		httpRequest.queryParams(queryParams);
+	}
+	
 	public void addBody(String body) {
 		httpRequest.body(body);
+	}
+	
+	public void addBodyFromFile(String fileName) {
+		String body = SerializationUtil.deserializeFromFileAsJsonString(fileName);
+		addBody(body);
 	}
 	
 	public Response post() {
@@ -57,5 +80,11 @@ public class CustomRequest {
 		 return httpRequest
 		.when()
 		.put(resource);
+	}
+	
+	public Response delete() {
+		 return httpRequest
+		.when()
+		.delete(resource);
 	}
 }

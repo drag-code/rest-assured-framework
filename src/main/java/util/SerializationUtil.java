@@ -17,7 +17,7 @@ public class SerializationUtil {
 		return Jsoner.prettyPrint(Jsoner.serialize(object));
 	}
 
-	public static <T> T deserializeAsObject(String deserializable, Class<T> destinationClass) {
+	public static <T> T deserializeFromStringAsObject(String deserializable, Class<T> destinationClass) {
 		JsonObject jsonObject;
 		Mapper mapper = new DozerBeanMapper();
 		T deserializedObject = null;
